@@ -6,13 +6,13 @@ import java.util.UUID;
 
 public class ContactService {
 	//I don't know why this is throwing this warning
-	private List<Contact> contactList = new ArrayList<>();
-	private String userID;
+	public List<Contact> contactList = new ArrayList<>();
+	public String userID;
 	
 	{userID = UUID.randomUUID().toString().substring(
 			0, Math.min(toString().length(), 10));}
 	
-	private String newUserID() {
+	public String newUserID() {
 		return userID = UUID.randomUUID().toString().substring(
 				0, Math.min(toString().length(), 10));
 				
@@ -42,7 +42,7 @@ public class ContactService {
 		Contact c = new Contact(newUserID(), fname, lname, phonenum, address);
 		contactList.add(c);
 	}
-	private Contact searchContact(String id) throws Exception{
+	public Contact searchContact(String id) throws Exception{
 		int i = 0;
 		while (i < contactList.size()) {
 			if (id.equals(contactList.get(i).getContactID())) {
