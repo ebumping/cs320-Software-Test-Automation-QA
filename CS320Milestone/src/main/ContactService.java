@@ -6,7 +6,7 @@ import java.util.UUID;
 
 public class ContactService {
 	//I don't know why this is throwing this warning
-	private List<Contact> contactList = new Arraylist<>();
+	private List<Contact> contactList = new ArrayList<>();
 	private String userID;
 	
 	{userID = UUID.randomUUID().toString().substring(
