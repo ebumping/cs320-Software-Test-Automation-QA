@@ -15,7 +15,7 @@ public class Contact {
 	private String phoneNumber;
 	private String address;
 	
-	Contact(){
+	public Contact(){
 		this.contactID = INIT;
 		this.firstName = INIT;
 		this.lastName = INIT;
@@ -23,7 +23,7 @@ public class Contact {
 		this.address = INIT;
 	}
 	
-	Contact(String contactID){
+	public Contact(String contactID){
 		updateContactID(contactID);
 		this.firstName = INIT;
 		this.lastName = INIT;
@@ -31,7 +31,7 @@ public class Contact {
 		this.address = INIT;
 	}
 	
-	Contact(String contactID, String firstName){
+	public Contact(String contactID, String firstName){
 		updateContactID(contactID);
 		updateFirstName(firstName);
 		this.lastName = INIT;
@@ -39,7 +39,7 @@ public class Contact {
 		this.address = INIT;
 	}
 	
-	Contact(String contactID, String firstName, String lastName){
+	public Contact(String contactID, String firstName, String lastName){
 		updateContactID(contactID);
 		updateFirstName(firstName);
 		updateLastName(lastName);
@@ -47,7 +47,7 @@ public class Contact {
 		this.address = INIT;
 	}
 	
-	Contact(String contactID, String firstName, String lastName, String phoneNumber){
+	public Contact(String contactID, String firstName, String lastName, String phoneNumber){
 		updateContactID(contactID);
 		updateFirstName(firstName);
 		updateLastName(lastName);
@@ -55,7 +55,7 @@ public class Contact {
 		this.address = INIT;
 	}
 	
-	Contact(String contactID, String firstName, String lastName, String phoneNumber, String address){
+	public Contact(String contactID, String firstName, String lastName, String phoneNumber, String address){
 		updateContactID(contactID);
 		updateFirstName(firstName);
 		updateLastName(lastName);
@@ -63,11 +63,11 @@ public class Contact {
 		updateAddress(address);
 	}
 	
-	protected final String getContactID() {
+	public final String getContactID() {
 		return contactID;
 	}
 	
-	protected final String getFirstName() {
+	public final String getFirstName() {
 		return firstName;
 	}
 	
@@ -131,12 +131,16 @@ public class Contact {
 	}
 	
 	protected void updateContactID(String contactID) {
+		//I am not sure why the requirements would like this to not have update capability.
 		if(contactID == null) {
 			throw new IllegalArgumentException("Contact ID field cannot be null");
 		} else if (contactID.length() > CONTACT_ID_LEN) {
 			throw new IllegalArgumentException("ContactID cannot be greater than " +
 												CONTACT_ID_LEN + 
 												" characters long.");
+		} else {
+			this.contactID = contactID;
 		}
+		
 	}
 }
