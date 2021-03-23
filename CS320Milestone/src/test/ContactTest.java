@@ -8,6 +8,14 @@ import org.junit.jupiter.api.Test;
 
 class ContactTest {
 
+	@Test
+	void testContact() {
+		Contact c = new Contact("54231", "Dyl");
+		assertTrue(c.getContactID.equals("54231"));
+		assertTrue(c.getFirstName.equals("Dyl"));
+	}
+	
+	/*
 	@BeforeEach
 	void setUp() throws Exception {
 	}
@@ -16,5 +24,5 @@ class ContactTest {
 	void contactTest() {
 		
 	}
-
+*/
 }
