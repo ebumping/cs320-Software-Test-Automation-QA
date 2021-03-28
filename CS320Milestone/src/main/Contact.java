@@ -14,6 +14,8 @@ public class Contact {
 	private String lastName;
 	private String phoneNumber;
 	private String address;
+	public Object getContactID;
+	public Object getFirstName;
 	
 	Contact(){
 		this.contactID = INIT;
@@ -31,7 +33,7 @@ public class Contact {
 		this.address = INIT;
 	}
 	
-	Contact(String contactID, String firstName){
+	public Contact(String contactID, String firstName){
 		updateContactID(contactID);
 		updateFirstName(firstName);
 		this.lastName = INIT;
