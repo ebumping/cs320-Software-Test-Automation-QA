@@ -51,7 +51,7 @@ public class Task {
 		}
 	}
 	
-	private void setName(String name) {
+	void setName(String name) {
 		if(name == null || name.length() > 20) {
 			throw new IllegalArgumentException("Invalid task, either null or too long");
 		} else {
@@ -62,7 +62,7 @@ public class Task {
 	
 	
 	
-	private void setDescription(String taskDescription) {
+	void setDescription(String taskDescription) {
 		if(taskDescription == null || taskDescription.length() > 50) {
 			throw new IllegalArgumentException("Invalid description, either null or too long");
 		} else {
