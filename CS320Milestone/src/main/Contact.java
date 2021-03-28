@@ -16,7 +16,7 @@ public class Contact {
 	private String address;
 	public Object getContactID;
 	public Object getFirstName;
-	
+	//these fixed in test??
 	public Contact(){
 		this.contactID = INIT;
 		this.firstName = INIT;
