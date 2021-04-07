@@ -7,7 +7,7 @@ public class Contact {
 	private static final byte CONTACT_FNAME_LEN = 10;
 	private static final byte CONTACT_LNAME_LEN = 10;
 	private static final byte CONTACT_ADDRESS_LEN = 30;
-	private static final String INIT = "Init";
+	private static final String INIT = "INIT";
 	private static final String INIT_NUM = "0123456789";
 	private String contactID;
 	private String firstName;
@@ -73,19 +73,19 @@ public class Contact {
 		return firstName;
 	}
 	
-	protected final String getLastName() {
+	public final String getLastName() {
 		return lastName;
 	}
 	
-	protected final String getPhoneNumber() {
+	public final String getPhoneNumber() {
 		return phoneNumber;
 	}
 	
-	protected final String getAddress() {
+	public final String getAddress() {
 		return address;
 	}
 	
-	protected void updateFirstName(String firstName) {
+	public void updateFirstName(String firstName) {
 		if (firstName == null) {
 			throw new IllegalArgumentException("First name shouldn't be null");
 		}else if (firstName.length() > CONTACT_FNAME_LEN) {
@@ -96,7 +96,7 @@ public class Contact {
 		}
 	}
 	
-	protected void updateLastName(String lastName) {
+	public void updateLastName(String lastName) {
 		if (lastName == null) {
 			throw new IllegalArgumentException("Last name shouldn't be null");
 		}else if (lastName.length() > CONTACT_LNAME_LEN) {
@@ -105,7 +105,7 @@ public class Contact {
 		}
 	}
 	
-	protected void updatePhoneNumber(String phoneNumber) {
+	public void updatePhoneNumber(String phoneNumber) {
 		//use a regular expression to match input as digits
 		String regex = "[0-9]+";
 		if (phoneNumber == null) {
@@ -120,7 +120,7 @@ public class Contact {
 		}
 	}
 	
-	protected void updateAddress(String address) {
+	public void updateAddress(String address) {
 		if(address == null) {
 			throw new IllegalArgumentException("Address cannot be null");
 		}else if (address.length() > CONTACT_ADDRESS_LEN) {
@@ -132,7 +132,7 @@ public class Contact {
 		}
 	}
 	
-	protected void updateContactID(String contactID) {
+	public void updateContactID(String contactID) {
 		//I am not sure why the requirements would like this to not have update capability.
 		if(contactID == null) {
 			throw new IllegalArgumentException("Contact ID field cannot be null");

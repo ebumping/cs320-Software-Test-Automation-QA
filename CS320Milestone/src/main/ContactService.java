@@ -72,7 +72,7 @@ public class ContactService {
 		searchContact(id).updateAddress(address);
 	}
 	
-	protected List<Contact> getContactList(){
+	public List<Contact> getContactList(){
 		return contactList;
 	}
 }
